@@ -91,7 +91,10 @@ const Header = () => {
                             >
                                 {user && user.email === 'developernayeem65@gmail.com' && (
                                     <Link to="/create">
-                                        <p className="px-4 py-2 flex items-center gap-3 cursor-pointer hover:bg-slate-200 transition-all duration-100 ease-in-out text-textColor text-base">
+                                        <p
+                                            className="px-4 py-2 flex items-center gap-3 cursor-pointer hover:bg-slate-200 transition-all duration-100 ease-in-out text-textColor text-base"
+                                            onClick={() => setIsMenu(false)}
+                                        >
                                             New Items <MdAdd />
                                         </p>
                                     </Link>
@@ -116,6 +119,15 @@ const Header = () => {
                         <p className="text-headingColor text-xl font-bold">City</p>
                     </div>
                 </Link>
+                <motion.div
+                    className="relative flex items-center justify-center"
+                    whileTap={{ scale: 0.6 }}
+                >
+                    <MdShoppingBasket className="text-textColor text-2xl cursor-pointer" />
+                    <div className="absolute -top-0 -right-3 w-5 h-5 rounded-full bg-cartNumBg flex justify-center items-center">
+                        <p className=" text-xs text-white font-semibold">2</p>
+                    </div>
+                </motion.div>
                 <div className="flex item-center gap-8">
                     <div className="relative">
                         <motion.img
@@ -125,6 +137,7 @@ const Header = () => {
                             alt="avater"
                             onClick={login}
                         />
+
                         {isMenu && (
                             <motion.div
                                 initial={{ opacity: 0, scale: 0.6 }}
@@ -134,7 +147,10 @@ const Header = () => {
                             >
                                 {user && user.email === 'developernayeem65@gmail.com' && (
                                     <Link to="/create">
-                                        <p className="px-4 py-2 flex items-center gap-3 cursor-pointer hover:bg-slate-200 transition-all duration-100 ease-in-out text-textColor text-base">
+                                        <p
+                                            className="px-4 py-2 flex items-center gap-3 cursor-pointer hover:bg-slate-200 transition-all duration-100 ease-in-out text-textColor text-base"
+                                            onClick={() => setIsMenu(false)}
+                                        >
                                             New Items <MdAdd />
                                         </p>
                                     </Link>
@@ -165,6 +181,7 @@ const Header = () => {
                                         Service
                                     </li>
                                 </ul>
+
                                 <p
                                     className="px-4 py-2 flex items-center gap-3 cursor-pointer hover:bg-slate-200 transition-all duration-100 ease-in-out text-textColor text-base"
                                     onClick={logout}

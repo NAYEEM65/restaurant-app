@@ -10,7 +10,7 @@ function App() {
         <AnimatePresence>
             <div className="w-screen h-auto flex flex-col bg-primary">
                 <Header />
-                <main className="w-full mt-24 p-8">
+                <main className="w-full mt-16 md:mt-20 px-4 md:px-16 py-4">
                     <Routes>
                         <Route path="/*" element={<MainContainer />} />
                         <Route path="/create" element={<CreateContainer />} />
